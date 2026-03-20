@@ -1,5 +1,5 @@
 # RustGovernor (v1.0.0)
-
+ 
 An ultra-lightweight Windows power governor designed to kill fan noise and keep high-performance laptops cool during daily tasks.
 
 I built this because Windows "Balanced" and "Performance" modes are often too aggressive—spiking voltages and clocks for simple tasks like web browsing, which leads to unnecessary heat and loud fans.
