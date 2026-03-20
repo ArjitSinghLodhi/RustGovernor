@@ -14,6 +14,20 @@ it creates a config.txt in its directory where its binary is located which you c
 
 ---
 
+# Config
+
+For any changes or custom configuration you can edit the config.txt located in the same directory as the binary rust-governor.exe and edit the configuration or add more like this
+
+`dc_` or `ac_` <= this is the state in which it'll be applied, the value between the state.
+
+The type is the cpu usage which it'll be applied around for example `ac_15_epp=80` this will apply epp 80 when cpu usage is around 15 percent.
+
+The type is the name that it'll be applied to for example `ac_45_cooling_threshold=1` if cpu usage is above 45 it'll apply value 1 to cooling parameter in the power plan.
+
+Lastly the value after the '=' sign is the value that's going to be applied for example `ac_70_turbo=1` this will do when ac and 70 percent cpu usage then set turbo to 1.
+
+---
+
 ## The Results (Real-World Test)
 Tested on a **Lenovo LOQ 15IAX9** (i5-12450HX, RTX 3050) while browsing in Firefox.
 
