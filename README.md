@@ -23,10 +23,12 @@ Tested on a **Lenovo LOQ 15IAX9** (i5-12450HX, RTX 3050) while browsing in Firef
 
 #### 1. Windows Default Behavior (Spiky & Hot)
 ![Windows Thermals](screenshots/Thermals_Windows_Browsing.png)
+
 *Notice the 1.21V spikes and the 74°C peak—totally unnecessary for just browsing.*
 
 #### 2. RustGovernor Behavior (Stable & Cool)
 ![RustGovernor Thermals](screenshots/Thermals_RustGovernor_Browsing.png)
+
 *Voltage is capped at 0.83V, and the temperature stays in the low 50s. The fans never even turned on.*
 
 ---
