@@ -61,6 +61,7 @@ ac_90_max=100
 ac_100_max=100
 ac_15_turbo=0
 ac_50_turbo=0
+ac_65_turbo=1
 ac_100_turbo=2
 ac_1_epp=100
 ac_5_epp=90
