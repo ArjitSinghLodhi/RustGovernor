@@ -1,0 +1,31 @@
+[package]
+name = "rust-governor"
+version = "1.0.0"
+edition = "2024"
+description = "A lightweight Windows power governor to prioritize cooling and silent operation while allowing on-demand performance."
+license = "MIT"
+authors = ["Arjit Singh Lodhi"]
+repository = "https://github.com/ArjitSinghLodhi/RustGovernor"
+
+[dependencies]
+sysinfo = "0.33.1"
+clap = { version = "4.5.31", features = ["derive"] }
+anyhow = "1.0.95"
+windows = { version = "0.60.0", features = [
+    "Win32_System_Power",
+    "Win32_Foundation",
+    "Win32_System_Registry",
+    "Win32_Security",
+    "Win32_System_Services",
+    "Win32_System_SystemServices",
+    "Win32_System_Performance",
+    "Win32_System_Threading",
+    "Win32_System_Console",
+] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3
+debug = true
+strip = false 
