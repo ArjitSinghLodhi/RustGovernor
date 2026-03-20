@@ -1,14 +1,20 @@
 # RustGovernor (v1.0.0)
 
-A ultra-lightweight Windows power governor designed to kill fan noise and keep high-performance laptops cool during daily tasks.
+An ultra-lightweight Windows power governor designed to kill fan noise and keep high-performance laptops cool during daily tasks.
 
-I built this because Windows "Balanced" and "Performance" modes are often too aggressive—spiking voltages and clocks for simple tasks like web browsing, which leads to unnecessary heat and loud fans. 
+I built this because Windows "Balanced" and "Performance" modes are often too aggressive—spiking voltages and clocks for simple tasks like web browsing, which leads to unnecessary heat and loud fans.
+
+The online tools just had too many sliders to manage and also a UI or require manual control or just requiure the GUI to be open. Mine just works and can deliver on-demand performance if needed.
 
 **RustGovernor** uses a "Cool-First" logic: it keeps the CPU efficient and silent during 0-50% load and only unleashes full power (Turbo Boost) when you actually floor it.
 
+It works by taking average load of the cpu and using it to do its logic preventing any of that immediate cpu changes just cause the cpu usage dropped by 1 percent
+
+it creates a config.txt in its directory where its binary is located which you can edit to create a more custom granular curve if you'd like.
+
 ---
 
-## 🚀 The Results (Real-World Test)
+## The Results (Real-World Test)
 Tested on a **Lenovo LOQ 15IAX9** (i5-12450HX, RTX 3050) while browsing in Firefox.
 
 | Metric | Windows Default (Balanced) | RustGovernor | **Improvement** |
@@ -33,7 +39,7 @@ Tested on a **Lenovo LOQ 15IAX9** (i5-12450HX, RTX 3050) while browsing in Firef
 
 ---
 
-## 💎 Elite Performance
+## Elite Performance
 *   **Binary Size:** 923 KB (No bloat)
 *   **RAM Usage:** < 1.0 MB
 *   **CPU Usage:** ~0% (Written in pure Rust)
@@ -54,4 +60,4 @@ rust-governor --monitor
 ---
 
 ## ⚖️ License
-MIT - Go nuts.
+MIT - This is just a program I made on the side do whatever you want with it.
