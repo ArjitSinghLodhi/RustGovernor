@@ -62,8 +62,9 @@ Tested on a **Lenovo LOQ 15IAX9** (i5-12450HX, RTX 3050) while browsing in Firef
 ## 🛠️ Installation
 1. Download the `rust-governor.exe`.
 2. Open a terminal as Administrator.
-3. Run `rust-governor --install`.
-4. It will now start automatically at boot (hidden in the background).
+3. cd to the folder you've downloaded `rust-governor.exe`
+4. Run the file like this `./rust-governor.exe --install`.
+5. It will now start automatically at boot (hidden in the background).
 
 ## 📊 Monitoring
 To see exactly what the governor is doing in real-time:
