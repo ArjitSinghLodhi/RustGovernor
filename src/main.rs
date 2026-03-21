@@ -285,7 +285,7 @@ fn main() -> Result<()> {
     
     if monitor_mode {
         println!("--------------------------------------------------");
-        println!("RustGovernor v0.2.0 Initializing...");
+        println!("RustGovernor v1.0.0 Initializing...");
         PowerManager::ensure_custom_plan()?;
         println!("Plan Activated | Rate: 1s | History: 10s Window");
         println!("--------------------------------------------------");
