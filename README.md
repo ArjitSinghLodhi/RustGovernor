@@ -2,29 +2,29 @@
  
 An ultra-lightweight Windows power governor designed to kill fan noise and keep high-performance laptops cool during daily tasks.
 
-I built this because Windows "Balanced" and "Performance" modes are often too aggressive—spiking voltages and clocks for simple tasks like web browsing, which leads to unnecessary heat and loud fans.
+I built this because Windows 11 "Balanced" and "Performance" modes are often too aggressive—spiking voltages and clocks for simple tasks like web browsing, which leads to unnecessary heat and loud fans.
 
-The online tools just had too many sliders to manage and also a UI or require manual control or just requiure the GUI to be open. Mine just works and can deliver on-demand performance if needed.
+The online tools just had too many sliders to manage on the UI or required manual control or just required the GUI to be open for managing thermals. Mine just works and can deliver on-demand performance if needed and is safe since it manages everything through its Windows 11 power plan named `RustGovernorPlan`.
 
-**RustGovernor** uses a "Cool-First" logic: it keeps the CPU efficient and silent during 0-50% load and only unleashes full power (Turbo Boost) when you actually floor it.
+**RustGovernor** uses a "Cool-First" logic: it keeps the CPU efficient and silent during 0-50% load and only unleashes full power when you actually floor it.
 
-It works by taking average load of the cpu and using it to do its logic preventing any of that immediate cpu changes just cause the cpu usage dropped by 1 percent
+It works by taking the average load of the CPU and using it to do its logic, thus preventing any of that immediate cpu changes just because the cpu usage dropped by 1 percent that normally would cause jitter.
 
-it creates a config.txt in its directory where its binary is located which you can edit to create a more custom granular curve if you'd like.
+It creates a config.txt in its directory where its binary is located which you can edit to create a more custom granular curve if you'd like and customize it based on your system.
 
 ---
 
 # Config
 
-For any changes or custom configuration you can edit the config.txt located in the same directory as the binary rust-governor.exe and edit the configuration or add more like this
+For any changes or custom configurations you can edit the config.txt located in the same directory as the binary rust-governor.exe and edit the configuration or add more parameters like this.
 
-`dc_` or `ac_` <= this is the state in which it'll be applied, the value between the state.
+`dc_` or `ac_` <= this is the state in which it'll be applied AC (Wall power) or DC (Battery).
 
-The type is the cpu usage which it'll be applied around for example `ac_15_epp=80` this will apply epp 80 when cpu usage is around 15 percent.
+The number between state and type is the cpu usage which it'll be applied around for example `ac_15_epp=80` this will apply epp 80 when cpu usage is below 15 percent and above the value before 15 set in config.txt.
 
-The type is the name that it'll be applied to for example `ac_45_cooling_threshold=1` if cpu usage is above 45 it'll apply value 1 to cooling parameter in the power plan.
+The type is the parameter in Windows 11 that it'll be applied to for example `ac_45_cooling_threshold=1` if cpu usage is above 45 it'll apply value 1 to cooling parameter in the power plan (Note: cooling thresholds are special because it sets cooling mode to 1 (Active) if cpu usage is above threshold specified).
 
-Lastly the value after the '=' sign is the value that's going to be applied for example `ac_70_turbo=1` this will do when ac and 70 percent cpu usage then set turbo to 1.
+Lastly the value after the '=' sign is the value that's going to be applied for example `ac_70_turbo=1` this will apply when the system is running on AC and  below 70 percent CPU usage above the value of the enxt parameter lower than it then set turbo to 1 (Enabled).
 
 ---
 
@@ -55,7 +55,7 @@ Tested on a **Lenovo LOQ 15IAX9** (i5-12450HX, RTX 3050) while browsing in Firef
 
 ## Elite Performance
 *   **Binary Size:** 923 KB (No bloat)
-*   **RAM Usage:** < 1.0 MB
+*   **RAM Usage:** Less than 1.0 MB
 *   **CPU Usage:** ~0% (Written in pure Rust)
 *   **Admin-Ready:** Installs as a Windows Task (Highest Privileges) to handle power schemes without UAC popups at every boot.
 
@@ -75,4 +75,4 @@ rust-governor --monitor
 ---
 
 ## ⚖️ License
-MIT - This is just a program I made on the side do whatever you want with it.
+MIT - This is just a program I made myself to fix my temps, do whatever you want with it.
