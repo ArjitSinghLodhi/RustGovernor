@@ -36,7 +36,7 @@ Tested on a **Lenovo LOQ 15IAX9** (i5-12450HX, RTX 3050) while browsing in Firef
 | **Peak CPU Temp** | 74°C | **54°C** | **-20°C Cooler** |
 | **Average Temp** | 61°C | **52°C** | **-9°C Cooler** |
 | **Peak Voltage** | 1.216V | **0.837V** | **Lower Power Draw** |
-| **Max Clock Speed** | 4.38 MHz | **2.29 MHz** | **Silent Operation** |
+| **Max Clock Speed** | 4.38 GHz | **2.29 GHz** | **Silent Operation** |
 | **Acoustics** | Fans Ramping Up | **Dead Silent** | **Peace of Mind** |
 
 ### Visual Proof (HWInfo Data)
