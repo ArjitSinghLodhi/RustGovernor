@@ -23,7 +23,7 @@ mod monitor_handling;
     version, 
     about, 
     long_about = None,
-    arg_required_else_help = true // Add this line!
+    arg_required_else_help = true
 )]
 struct Args {
     #[arg(short, long, help = "Installs RustGovernor")] install: bool,
