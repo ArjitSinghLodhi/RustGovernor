@@ -73,6 +73,15 @@ rust-governor --monitor
 ```
 
 ---
+## ⚖️ License & Acknowledgments
+This project is licensed under the **MIT License**.
 
-## ⚖️ License
-MIT - This is just a program I made myself to fix my temps, do whatever you want with it.
+**Disclaimer:** This software is provided "as-is." While it uses standard Windows 11 Power Plan APIs to manage CPU behavior, the author is not responsible for any system instability, crashes (BSODs), or hardware issues. **Use at your own risk.**
+
+### Third-Party Licenses
+This binary includes code from the following projects:
+- **windows-rs**: (c) Microsoft Corporation (MIT)
+- **sysinfo**: (c) Guillaume Gomez (MIT)
+- **clap**: (c) Kevin K. et al. (MIT/Apache 2.0)
+- **anyhow**: (c) David Tolnay (MIT/Apache 2.0)
+
